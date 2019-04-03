@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">magic sqaure</string>
+    <string name="construct">construct!</string>
+    <string name="enter_number">Number of rows</string>
+    <string name="msg_number_cant_be_empty">"Number can't be empty"</string>
+    <string name="msg_number_cant_be_less">"Number can't be less than 2"</string>
+    <string name="msg_number_cant_be_even">"Number can't be even"</string>
+</resources>
