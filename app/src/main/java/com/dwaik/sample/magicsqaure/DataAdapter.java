@@ -31,13 +31,14 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
 
     @Override
     public int getItemCount() {
-        return dataSource.getData() != null ? dataSource.getData().size() : 0;
+        return (dataSource == null || dataSource.getData() == null) ?
+                0 : dataSource.getData().size();
     }
 
-    public class DataViewHolder extends RecyclerView.ViewHolder {
-        public TextView title;
+    class DataViewHolder extends RecyclerView.ViewHolder {
+        TextView title;
 
-        public DataViewHolder(@NonNull View itemView) {
+        DataViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.tv_item);
         }

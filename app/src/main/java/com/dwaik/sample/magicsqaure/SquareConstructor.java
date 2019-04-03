@@ -10,12 +10,12 @@ public class SquareConstructor implements BaseConstructor {
         int tmpI;
         int tmpJ;
 
-        while (value < size * size) {
+        while (value <= size * size) {
             arr[i][j] = value;
             tmpI = (i + 1) % size;
             tmpJ = (j + 1) % size;
             if (arr[tmpI][tmpJ] != 0) { //already visited
-                j = j == 0 ? j = size - 1 : j--;
+                i = i == 0 ? size - 1 : i - 1;
             } else {
                 i = tmpI;
                 j = tmpJ;
